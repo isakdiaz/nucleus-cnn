@@ -23,20 +23,17 @@ from keras.layers.merge import concatenate
 from keras.callbacks import EarlyStopping, ModelCheckpoint
 from keras import backend as K
 
-from metrics.mean_iou import mean_iou
+
 
 import tensorflow as tf
 
-IMG_WIDTH = 128
-IMG_HEIGHT = 128
-IMG_CHANNELS = 3
 
 
 class UNET(Model):
 
     def __init__(self, input_shape):         #InputShape -> (H, W, Channels)
 
-        # Build U-Net model
+        # Build U-Net models
 
         inputs = Input(input_shape)
         s = Lambda(lambda x: x / 255) (inputs)
@@ -95,4 +92,4 @@ class UNET(Model):
         super(UNET, self).__init__(inputs, outputs)
 
     def compile(self, optimizer, **kwargs):
-        super(UNET, self).compile(optimizer, None)
+        super(UNET, self).compile(optimizer, **kwargs)

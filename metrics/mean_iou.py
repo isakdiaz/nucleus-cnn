@@ -1,5 +1,6 @@
 import numpy as np
 import tensorflow as tf
+from keras import backend as K
 
 # Define IoU metric
 def mean_iou(y_true, y_pred):

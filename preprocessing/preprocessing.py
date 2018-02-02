@@ -75,6 +75,7 @@ print('Done!')
 
 
 #Save images to numpy file
-np.save('X_train.npy', X_train)
-np.save('Y_train.npy', Y_train)
-np.save('X_test.npy', X_test)
+np.save('input/X_train.npy', X_train)
+np.save('input/Y_train.npy', Y_train)
+np.save('input/X_test.npy', X_test)
+np.save('input/sizes_test.npy', sizes_test)

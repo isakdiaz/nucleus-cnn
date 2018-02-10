@@ -17,7 +17,7 @@ X_test = np.load('input/X_test.npy')
 sizes_test = np.load('input/sizes_test.npy')
 
 # Predict on train, val and test
-model = load_model('models/model-dsbowl2018-1.h5', custom_objects={'mean_iou': mean_iou})
+model = load_model('models/models-dsbowl2018-1.h5', custom_objects={'mean_iou': mean_iou})
 preds_train = model.predict(X_train[:int(X_train.shape[0]*0.9)], verbose=1)
 preds_val = model.predict(X_train[int(X_train.shape[0]*0.9):], verbose=1)
 preds_test = model.predict(X_test, verbose=1)

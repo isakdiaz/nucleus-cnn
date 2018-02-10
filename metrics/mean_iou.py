@@ -12,4 +12,5 @@ def mean_iou(y_true, y_pred):
         with tf.control_dependencies([up_opt]):
             score = tf.identity(score)
         prec.append(score)
+
     return K.mean(K.stack(prec), axis=0)

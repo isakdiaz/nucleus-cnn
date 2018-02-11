@@ -76,7 +76,7 @@ class UNET(Model):
 
         outputs = Conv2D(1, (1, 1), activation='sigmoid')(c9)
 
-        super(Model, self).__init__(inputs, outputs) #TODO FIX superclass
+        super(Model, self).__init__(inputs, outputs)
 
     def compile(self, optimizer, **kwargs):
         super(UNET, self).compile(optimizer, **kwargs)

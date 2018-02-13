@@ -7,8 +7,8 @@ from encoding.rle import prob_to_rles
 import pandas as pd
 
 
-TRAIN_PATH = 'input/stage1_train/'
-TEST_PATH = 'input/stage1_test/'
+TRAIN_PATH = 'data/stage1_train/'
+TEST_PATH = 'data/stage1_test/'
 
 #Load Preprocessing files
 X_train = np.load('input/X_train.npy')
